@@ -1,0 +1,165 @@
+/* GENERAL */
+body {
+  background-color: #f5f5f5;
+}
+
+/* toasts */
+#toast-container {
+  top: auto !important;
+  left: auto !important;
+  bottom: 10%;
+  right: 7%;
+}
+
+/*TOP BAR */
+
+#top-bar {
+  margin-top: 5rem;
+}
+
+#search-bar {
+  padding: 0;
+}
+
+/* search input */
+
+.input-field input[type='search'] {
+  border-bottom: none;
+}
+
+.input-field input[type='search']::placeholder {
+  color: white;
+}
+.input-field input[type='search'].label-icon {
+  color: red;
+}
+
+.input-field input[type='search']:focus {
+  border-bottom: 1px solid #rgb(167, 225, 20);
+  box-shadow: 0 1px 0 0 #rgb(167, 225, 20);
+}
+
+.input-field input[type='search'] ~ .close-btn {
+  top: unset;
+}
+
+/* add button */
+/* add FAB - for Safari */
+.fixed-action-btn ul {
+  text-align: right;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  left: auto;
+  width: 500px;
+}
+
+.fixed-action-btn ul li {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.fixed-action-btn {
+  position: relative;
+  top: 0;
+}
+
+/* LOGS */
+
+#logs {
+  padding: 2rem;
+}
+
+.logs-collection {
+  height: 60vh;
+  overflow: scroll;
+}
+
+#logs ul li {
+  padding: 1rem 5rem 2rem 1rem;
+}
+
+.log-title {
+  font-size: 1.1em;
+  transition: opacity 0.25s;
+}
+
+.log-title:hover {
+  opacity: 0.6;
+}
+
+.log-message {
+  margin: 0;
+  padding: 0;
+}
+
+.log-message::first-letter {
+  text-transform: uppercase;
+}
+
+.log-tech {
+  text-transform: capitalize;
+}
+
+.log-meta {
+  font-size: 0.8em;
+}
+
+.log-delete {
+  position: relative;
+  height: 100%;
+  right: -4rem;
+
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.log-delete::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  background-color: gray;
+  transition: all 0.25s;
+}
+
+.log-delete:hover::after {
+  width: 200px;
+}
+
+.log-delete:hover {
+  transform: scale(1.2);
+}
+
+/* TECHS */
+
+.tech-list {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .tech-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.initials {
+  vertical-align: middle;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  cursor: default;
+
+  line-height: 50px;
+  background-color: yellow;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
